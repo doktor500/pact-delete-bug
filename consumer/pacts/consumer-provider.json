@@ -1,0 +1,55 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "interactions": [
+    {
+      "description": "a request for deleting user 1 with HTTP DELETE",
+      "providerState": "delete-user-1",
+      "request": {
+        "method": "DELETE",
+        "path": "/users/1",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "reasonType": "FRAUD"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        }
+      }
+    },
+    {
+      "description": "a request for deleting user 1 with HTTP POST",
+      "providerState": "delete-user-1",
+      "request": {
+        "method": "POST",
+        "path": "/users/1",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "reasonType": "FRAUD"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
